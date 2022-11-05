@@ -16,7 +16,7 @@ function myFunction() {
 //myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+//Because the scope of the nested function carrys out to the main "myFunction"
 
 
 
@@ -30,9 +30,12 @@ function myFunction() {
 💡 NOTE: you may use a for loop for this function if you wish 
 */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let sum = 0
+  for(let i = 0; i <= number; i++){
+      sum += i
+  }
+  return sum
   }
  
 
@@ -60,8 +63,8 @@ const zooAnimals = [
   💡 NOTE: the array returned should be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(data){
+    return data.forEach(item => {item - item.population, item.state})
   }
   
 
@@ -75,8 +78,8 @@ const zooAnimals = [
   💡 NOTE: Do some research for other methods that can help help you
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(data){
+    return data.map(item => item.animal_name.toLowerCase());
   }
   
   
@@ -88,8 +91,8 @@ const zooAnimals = [
   3. Return this new array
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(data){
+    return data.filter(item => item.population <= 4)
   }
   
 
@@ -102,8 +105,9 @@ const zooAnimals = [
   💡 NOTE: Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count. Check MDN/W3Schools for syntax!
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(data){
+    const sum = data.reduce((previousValue, currentValue) => previousValue + currentValue.population, 0,);
+    return sum
   }
   
   
@@ -115,9 +119,15 @@ const zooAnimals = [
     
     💡 NOTE: The tests for 'consume' will pass if it is created correctly and also after you correctly complete the functions 'add' and 'greeting' below in Step 2.
   */
+ function a(){}
+ function b(){}
+ function cb(){
+  a();
+  b();
+ }
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a, b, cb){
+
   }
  
   
