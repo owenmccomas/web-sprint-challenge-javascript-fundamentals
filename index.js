@@ -64,7 +64,9 @@ const zooAnimals = [
   */
 
   function animalNames(data){
-    return data.forEach(item => {item - item.population, item.state})
+    const bothNames = [];
+    data.forEach(item => bothNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`))
+    return bothNames
   }
   
 
